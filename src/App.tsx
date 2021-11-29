@@ -19,7 +19,7 @@ class App extends Component<{}, IState> {
 
   renderGraph() {
     if (this.state.showGraph) {
-      return (<Graph data={this.state.data}/>)
+      return (<Graph data={this.state.data} />)
     }
   }
 
@@ -43,12 +43,16 @@ class App extends Component<{}, IState> {
     return (
       <div className="App">
         <header className="App-header">
-          Bank Merge & Co Task 3
+          Stocks Correlation Dashboard <br />
+          JPMorgan Chase
         </header>
         <div className="App-content">
-          <button className="btn btn-primary Stream-button" onClick={() => {this.getDataFromServer()}}>Start Streaming Data</button>
+          <button className="btn btn-primary Stream-button" onClick={() => { this.getDataFromServer() }}>Start Streaming Data</button>
           <div className="Graph">
             {this.renderGraph()}
+          </div>
+          <div>
+            <p>This graph monitors and displays two historically correlated stocks for the purpose of notifiying traders when to buy underperforming stock and when to sell outperforming stock. </p>
           </div>
         </div>
       </div>
